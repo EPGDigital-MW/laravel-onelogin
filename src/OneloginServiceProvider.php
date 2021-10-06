@@ -75,8 +75,8 @@ class OneloginServiceProvider extends ServiceProvider
                         'binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
                     ],
                     'attributeConsumingService' => [
-                        'ServiceName' => 'SP test',
-                        'serviceDescription' => 'Test Service',
+                        'ServiceName' => config('onelogin.sp.attribute_consuming_service.service_name'),
+                        'serviceDescription' => config('onelogin.sp.attribute_consuming_service.service_description'),
                         'requestedAttributes' => [
                             [
                                 'name' => '',
@@ -92,9 +92,9 @@ class OneloginServiceProvider extends ServiceProvider
                         'binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
                     ],
                     'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
-                    'x509cert' => '',
-                    'privateKey' => '',
-                    'x509certNew' => '',
+                    'x509cert' => config('onelogin.sp.x509_cert'),
+                    'privateKey' => config('onelogin.sp.private_key'),
+                    'x509certNew' => config('onelogin.sp.x509_cert_new'),
                 ],
                 'idp' => [
                     'entityId' => config('onelogin.issuer_url'),
