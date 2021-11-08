@@ -91,7 +91,7 @@ class OneloginServiceProvider extends ServiceProvider
                         'url' => route('onelogin.logout'),
                         'binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
                     ],
-                    'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
+                    'NameIDFormat' => config('onelogin.sp.name_id_format'),
                     'x509cert' => config('onelogin.sp.x509_cert'),
                     'privateKey' => config('onelogin.sp.private_key'),
                     'x509certNew' => config('onelogin.sp.x509_cert_new'),
