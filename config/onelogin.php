@@ -124,6 +124,7 @@ return [
             'service_name' => 'SP test',
             'service_description' => 'Test Service',
         ],
+        'name_id_format' =>  'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
         'x509_cert' => '',
         'private_key' => '',
         'x509_cert_new' => '',
