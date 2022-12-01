@@ -123,6 +123,15 @@ return [
         'attribute_consuming_service' => [
             'service_name' => 'SP test',
             'service_description' => 'Test Service',
+            'requested_attributes' => [
+                [
+                    'name' => '',
+                    'isRequired' => false,
+                    'nameFormat' => '',
+                    'friendlyName' => '',
+                    'attributeValue' => ''
+                ]
+            ]
         ],
         'name_id_format' =>  'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
         'x509_cert' => '',

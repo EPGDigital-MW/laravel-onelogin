@@ -77,15 +77,7 @@ class OneloginServiceProvider extends ServiceProvider
                     'attributeConsumingService' => [
                         'serviceName' => config('onelogin.sp.attribute_consuming_service.service_name'),
                         'serviceDescription' => config('onelogin.sp.attribute_consuming_service.service_description'),
-                        'requestedAttributes' => [
-                            [
-                                'name' => '',
-                                'isRequired' => false,
-                                'nameFormat' => '',
-                                'friendlyName' => '',
-                                'attributeValue' => ''
-                            ]
-                        ]
+                        'requestedAttributes' => config('onelogin.sp.attribute_consuming_service.requested_attributes'),
                     ],
                     'singleLogoutService' => [
                         'url' => route('onelogin.logout'),
